@@ -1,18 +1,17 @@
 "use client";
-import ArrowIcon from "@/assets/arrow-right.svg";
 import cogImage from "@/assets/cog.png";
 import cylinderImage from "@/assets/cylinder.png";
 import noodleImage from "@/assets/noodle.png";
-import Image from "next/image";
 import {
   motion,
   useScroll,
   useTransform,
-  useMotionValueEvent,
 } from "framer-motion";
 import { useRef } from "react";
+import { useRouter } from "next/navigation";
 
-export const Hero = () => {
+export const Hero = () => { 
+  const router = useRouter();
   const heroRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: heroRef,
@@ -38,10 +37,11 @@ export const Hero = () => {
               successes.
             </p>
             <div className="flex gap-1 items-center mt-[30px]">
-              <button className="btn btn-primary">Get for free</button>
-              <button className="btn btn-text gap-1">
-                <span>Learn more</span>
-                <ArrowIcon className="h-5 w-5" />
+              <button
+                className="px-4 py-2 bg-blue-800 text-white rounded-lg"
+                onClick={() => router.push("/inquiry")} // Corrected route
+              >
+                Contact Us
               </button>
             </div>
           </div>

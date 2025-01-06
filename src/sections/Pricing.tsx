@@ -1,13 +1,15 @@
 "use client";
+
 import CheckIcon from "@/assets/check.svg";
 import { twMerge } from "tailwind-merge";
 import { motion } from "framer-motion";
+import { useRouter } from "next/navigation"; // Import useRouter
 
 const pricingTiers = [
   {
     title: "Free",
     monthlyPrice: 0,
-    buttonText: "Get started for free",
+    buttonText: "Contact For Pricing",
     popular: false,
     inverse: false,
     features: [
@@ -21,7 +23,7 @@ const pricingTiers = [
   {
     title: "Pro",
     monthlyPrice: 9,
-    buttonText: "Sign up now",
+    buttonText: "Contact For Pricing",
     popular: true,
     inverse: true,
     features: [
@@ -37,7 +39,7 @@ const pricingTiers = [
   {
     title: "Business",
     monthlyPrice: 19,
-    buttonText: "Sign up now",
+    buttonText: "Contact For Pricing",
     popular: false,
     inverse: false,
     features: [
@@ -56,6 +58,13 @@ const pricingTiers = [
 ];
 
 export const Pricing = () => {
+  const router = useRouter(); // Initialize Next.js router
+
+  const handleButtonClick = (tier: string) => {
+    // Redirect to the inquiry page with the selected tier in the query
+    router.push(`/inquiry?plan=${tier}`);
+  };
+
   return (
     <section className="py-24 bg-white">
       <div className="container">
@@ -77,6 +86,7 @@ export const Pricing = () => {
               features,
             }) => (
               <div
+                key={title}
                 className={twMerge(
                   "card",
                   inverse === true && "border-black bg-black text-white"
@@ -123,12 +133,13 @@ export const Pricing = () => {
                     "btn btn-primary w-full mt-[30px]",
                     inverse === true && "bg-white text-black"
                   )}
+                  onClick={() => handleButtonClick(title)} // Navigate to inquiry page
                 >
                   {buttonText}
                 </button>
                 <ul className="flex flex-col gap-5 mt-8">
                   {features.map((feature) => (
-                    <li className="text-sm flex items-center gap-4">
+                    <li key={feature} className="text-sm flex items-center gap-4">
                       <CheckIcon className="h-6 w-6" />
                       <span>{feature}</span>
                     </li>

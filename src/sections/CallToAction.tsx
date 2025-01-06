@@ -4,7 +4,9 @@ import starImage from "@/assets/star.png";
 import springImage from "@/assets/spring.png";
 import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef } from "react";
+import { useRef, useState } from "react";
+import { useRouter } from "next/router";
+
 
 export const CallToAction = () => {
   const sectionRef = useRef(null);
@@ -14,6 +16,7 @@ export const CallToAction = () => {
   });
 
   const translateY = useTransform(scrollYProgress, [0, 1], [150, -150]);
+  const [showForm, setShowForm] = useState(false); 
   return (
     <section
       ref={sectionRef}
@@ -21,7 +24,7 @@ export const CallToAction = () => {
     >
       <div className="container">
         <div className="section-heading relative">
-          <h2 className="section-title">Sign up for free today</h2>
+          <h2 className="section-title">Get started for free today</h2>
           <p className="section-description mt-5">
             Celebrate the joy of accomplishment with an app designed to track
             your progress and motivate your efforts.
@@ -45,13 +48,7 @@ export const CallToAction = () => {
             }}
           />
         </div>
-        <div className="flex gap-2 mt-10 justify-center">
-          <button className="btn btn-primary">Get for free</button>
-          <button className="btn btn-text gap-1">
-            <span>Learn more</span>
-            <ArrowRight className="h-5 w-5" />
-          </button>
-        </div>
+        
       </div>
     </section>
   );
