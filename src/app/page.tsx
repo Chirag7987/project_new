@@ -6,6 +6,7 @@ import { Pricing } from "@/sections/Pricing";
 import { Testimonials } from "@/sections/Testimonials";
 import { CallToAction } from "@/sections/CallToAction";
 import { Footer } from "@/sections/Footer";
+import { BusinessHero } from "@/sections/BusinessHero";
 
 export default function Home() {
   return (
