@@ -86,9 +86,9 @@ export const Hero = () => {
         </div>
       </div>
     <div className="container">
-      <div className="w-full flex flex-col md:flex-row items-center gap-7 px-4">
+      <div className="w-full flex flex-col md:flex-row items-center gap-10 px-4">
       {/* Right: Image Section */}
-      <div className="mt-20 md:mt-0 md:h-[500px] flex-1 relative flex items-center justify-center min-w-[300px]">
+      <div className="mt-20 md:mt-0 md:h-[600px] flex-1 relative flex items-center justify-center min-w-[300px]">
       <motion.img
       src={starImage.src}
       alt="Star Image"
@@ -99,23 +99,24 @@ export const Hero = () => {
       }}
       />
       <motion.img
-      src={businessGraphImage.src}
-      alt="Business graph"
-      className="md:h-[100%] md:max-w-[95%] lg:max-w-[100%] object-contain"
-      animate={{
-        translateY: [-20, 20],
-      }}
-      transition={{
-        repeat: Infinity,
-        repeatType: "mirror",
-        duration: 3,
-        ease: "easeInOut",
-      }}
-      />
+  src={businessGraphImage.src}
+  alt="Business graph"
+  className="md:absolute md:h-[140%] md:w-auto md:max-w-[140%] object-contain md:right-[-40px]"
+  animate={{
+    translateY: [-20, 20],
+  }}
+  transition={{
+    repeat: Infinity,
+    repeatType: "mirror",
+    duration: 3,
+    ease: "easeInOut",
+  }}
+/>
+
     </div>
 
   {/* Left: Content Section */}
-    <div className="md:w-[478px] flex-shrink-0">
+    <div className="md:w-[478px] flex-shrink-0 mr-auto">
       <div className="tag">Empowering Your Business</div>
       <h1 className="text-5xl md:text-7xl font-bold tracking-tighter bg-gradient-to-b from-black to-[#283593] text-transparent bg-clip-text mt-6">
         Unlock Your Business Potential
