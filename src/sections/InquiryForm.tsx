@@ -1,8 +1,6 @@
 "use client";
-import ArrowRight from "@/assets/arrow-right.svg";
 import Logo from "@/assets/logosaas.png";
 import Image from "next/image";
-import MenuIcon from "@/assets/menu.svg";
 import { useRouter } from "next/navigation";
 
 import React, { useState } from "react";

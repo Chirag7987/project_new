@@ -1,5 +1,4 @@
 import ContactForm from "@/sections/InquiryForm"; // Adjust the path to your file
-import { Header } from "@/sections/Header";
 
 export default function Inquiry() {
   return (
