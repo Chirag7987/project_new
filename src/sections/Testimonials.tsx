@@ -93,9 +93,9 @@ const TestimonialsColumn = (props: {
       className="flex flex-col gap-6 pb-6"
     >
       {[...new Array(2)].fill(0).map((_, index) => (
-        <React.Fragment key={index}>
-          {props.testimonials.map(({ text, imageSrc, name, username }) => (
-            <div className="card">
+        <React.Fragment key={`column-loop-${index}`}>
+          {props.testimonials.map(({ text, imageSrc, name, username }, idx) => (
+            <div className="card" key={`testimonial-${index}-${idx}`}>
               <div>{text}</div>
               <div className="flex items-center gap-2 mt-5">
                 <Image
@@ -119,6 +119,7 @@ const TestimonialsColumn = (props: {
     </motion.div>
   </div>
 );
+
 
 export const Testimonials = () => {
   return (
