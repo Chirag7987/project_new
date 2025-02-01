@@ -31,7 +31,7 @@ export const Hero = () => {
           <div className="md:w-[478px]">
             <div className="tag">Version 2.0 is here</div>
             <h1 className="text-5xl md:text-7xl font-bold tracking-tighter bg-gradient-to-b from-black to-[#001E80] text-transparent bg-clip-text mt-6">
-              Pathway to productivity
+            Unlocking Productivity Paths
             </h1>
             <p className="text-xl text-[#010D3E] tracking-tight mt-6">
               Celebrate the joy of accomplishment with an app designed to track
