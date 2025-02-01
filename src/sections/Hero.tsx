@@ -101,7 +101,7 @@ export const Hero = () => {
       <motion.img
   src={businessGraphImage.src}
   alt="Business graph"
-  className="md:absolute md:h-[140%] md:w-auto md:max-w-[140%] object-contain md:right-[-40px]"
+  className="md:absolute md:h-[140%] md:w-auto md:max-w-[140%] object-contain md:right-[-40px] mr-6"
   animate={{
     translateY: [-20, 20],
   }}
@@ -114,7 +114,7 @@ export const Hero = () => {
 />
 
     </div>
-
+  
   {/* Left: Content Section */}
     <div className="md:w-[478px] flex-shrink-0 mr-auto">
       <div className="tag">Empowering Your Business</div>
