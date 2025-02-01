@@ -2,6 +2,7 @@
 import Logo from "@/assets/logosaas.png";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
+import Link from 'next/link';
 
 import React, { useState } from "react";
 import "./InquiryForm.css"; // Import the CSS file
@@ -21,15 +22,12 @@ const ContactForm: React.FC = () => {
     setTimeout(() => {
       setButtonText("Send");
       setShowSuccessMessage(true);
-
+      
       // Reset form after success
       setFullname("");
       setEmail("");
       setSubject("");
       setMessage("");
-
-      // Redirect back to the previous page
-      router.back();
     }, 2000);
   };
 
@@ -38,7 +36,9 @@ const ContactForm: React.FC = () => {
       <div className="py-5">
         <div className="container">
           <div className="">
+          <Link href="/" passHref>
             <Image src={Logo} alt="Saas Logo" height={40} width={40} />
+          </Link>
             {/* <MenuIcon className="h-5 w-5 md:hidden" /> */}
           </div>
         </div>

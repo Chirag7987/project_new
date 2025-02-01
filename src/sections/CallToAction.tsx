@@ -45,7 +45,6 @@ export const CallToAction = () => {
             }}
           />
         </div>
-        
       </div>
     </section>
   );
