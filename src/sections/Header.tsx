@@ -33,7 +33,7 @@ export const Header = () => {
           <Link href="/" passHref>
             <Image src={Logo} alt="Saas Logo" height={40} width={40} />
           </Link>
-            <MenuIcon className="h-5 w-5 md:hidden" />
+          
             <nav className="hidden md:flex gap-6 text-black/60 items-center">
               {/* <a href="#">About</a>
               <a href="#">Features</a>

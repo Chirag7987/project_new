@@ -17,7 +17,7 @@ export const Footer = () => {
           <a href="#">Careers</a> */}
         </nav>
         <p className="mt-6">
-          &copy; 2025 Your Company, Inc. All rights reserved.
+          &copy; 2023 coreintels, Inc. All rights reserved.
         </p>
       </div>
     </footer>
